@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [Home::class, 'index']);
-Route::get('/page1', [AnotherPage::class, 'p1']);
-Route::get('/page2', [AnotherPage::class, 'p2']);
-Route::get('/page3', [AnotherPage::class, 'p3']);
+Route::get("/", [Home::class, "index"])->name("home");
+Route::get("/page1", [AnotherPage::class, "p1"])->name("page1");
+Route::get("/page2", [AnotherPage::class, "p2"])->name("page2");
+Route::get("/page3", [AnotherPage::class, "p3"])->name("page3");
