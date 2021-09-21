@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AnotherPage;
+use App\Http\Controllers\Home;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Home::class, 'index']);
+Route::get('/page1', [AnotherPage::class, 'p1']);
+Route::get('/page2', [AnotherPage::class, 'p2']);
+Route::get('/page3', [AnotherPage::class, 'p3']);
