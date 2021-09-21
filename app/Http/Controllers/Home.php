@@ -8,6 +8,20 @@ class Home extends Controller
 {
     public function index(Request $request)
     {
-        return view("home");
+        $data = [
+            [
+                "link" => "page1",
+                "name" => "Page One",
+            ],
+            [
+                "link" => "page2",
+                "name" => "Page Two",
+            ],
+            [
+                "link" => "page3",
+                "name" => "Page Three",
+            ],
+        ];
+        return view("home", ["links" => $data]);
     }
 }
