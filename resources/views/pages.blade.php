@@ -2,7 +2,7 @@
 
 @section('body')
     
-<div>
+<div data-xhr="main">
     <div x-data="{ show: false }">
         <button @click="show = !show">Show</button>
         <h1 x-show="show">Hello Alpine.js</h1>

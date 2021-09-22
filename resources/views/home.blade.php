@@ -2,7 +2,7 @@
 
 @section('body')
     
-<div>
+<div data-xhr="main">
     <livewire:counter /> 
 
 </br>
