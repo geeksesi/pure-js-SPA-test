@@ -7,6 +7,7 @@ const render = (content) => {
         document.querySelector(`[data-xhr=${xhr}]`).innerHTML =
             new_element.innerHTML;
     });
+    register_a_tag();
 };
 
 const handle_rout_changes = (destination_url) => {
@@ -21,11 +22,15 @@ const handle_rout_changes = (destination_url) => {
         });
 };
 
-document.querySelectorAll("a").forEach((element) => {
-    console.log(element);
-    element.onclick = (e) => {
-        e.preventDefault();
+const register_a_tag = () => {
+    document.querySelectorAll("a").forEach((element) => {
+        console.log(element);
+        element.onclick = (e) => {
+            e.preventDefault();
 
-        handle_rout_changes(element.href);
-    };
-});
+            handle_rout_changes(element.href);
+        };
+    });
+};
+
+register_a_tag();
