@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    @livewireStyles
+    <script src="{{ mix('js/app.js') }}" defer></script>
+
 </head>
 <body>
     
     @yield('body')
     
-    @livewireScripts
-    <script src="{{ mix('js/app.js') }}" defer></script>
 </body>
 </html>
