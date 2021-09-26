@@ -24,4 +24,9 @@ class Home extends Controller
         ];
         return view("home", ["links" => $data]);
     }
+
+    public function index_js()
+    {
+        return view("home-js");
+    }
 }
